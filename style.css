@@ -24,7 +24,7 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: 0.3s;
+    transition-duration: 0.3s;
 }
 
 .ex-3-square:hover {
@@ -36,15 +36,54 @@
     width: 100px;
     height: 100px;
     background: red;
+    transition-duration: 5s;
 }
+
+.ex-4-square:hover {
+    opacity: 0;
+}
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition-duration: 0.5s;
 }
+
+.ex-5-square:hover {
+    transform: scale(2);
+
+}
+
+.ex-5-square:active {
+    transform: scale(0.5);
+}
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+    transition-duration: 0.3s;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(1);
+}
+
+.ex-7-img {
+    transition-duration: 5s;
+}
+
+.ex-7-img:hover {
+    filter: blur(2px) contrast(175%)
+}
+
+.ex-8-img:hover {
+    transition-duration: 5s;
+}
+
+.ex-8-img:hover {
+    filter: grayscale(1) contrast(125%);
+    border-radius: 50%;
 }
 
 .ex-9-img {
