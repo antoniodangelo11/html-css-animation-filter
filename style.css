@@ -89,13 +89,55 @@
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition-duration: 5s;
 }
+
+.ex-9-img:hover {
+    filter: saturate(300%) sepia(100%);
+    transform: scale(.5);
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation-duration: 5s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
+    animation-duration: 5s;
+    animation-name: rotate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
 }
+
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(330deg);
+    }
+
+    75% {
+        transform: rotate(0)
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -124,4 +166,120 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+.ex-12-button:hover .ex-12-top-white {
+    animation-name: top-bar;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top-bar {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: bot-bar; 
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bot-bar {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: top-bar-cirle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top-bar-cirle {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+
+    45% {
+        top: 100%;
+        left: calc(100% - 30px);
+    }
+
+    75% {
+        left: 0;
+        top: 100%;
+    }
+
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+
+    100% {
+        top: -10px;
+        left: 10%
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation-name: bot-bar-cirle; 
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bot-bar-cirle {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+
+    45% {
+        bottom: 100%;
+        right: calc(100% - 30px);
+    }
+
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
